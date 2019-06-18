@@ -1,0 +1,9 @@
+" vimrc 模板
+
+set nocompatible    "设置不兼容vi
+
+
+"将配置文件添加到vimrc 
+if filereadable("~/.vim/LambdaVim/init.vim")    
+    source  ~/.vim/LambdaVim/init.vim
+endif

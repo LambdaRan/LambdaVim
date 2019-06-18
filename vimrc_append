@@ -1,0 +1,4 @@
+"将配置文件添加到vimrc 
+if filereadable("~/.vim/LambdaVim/init.vim")    
+    source  ~/.vim/LambdaVim/init.vim
+endif
