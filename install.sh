@@ -2,19 +2,18 @@
 
 function download_LambdaVim()
 {
-    if [ -e "~/.vim" ]; then
+    if [ -e "$HOME/.vim" ]; then
         mv ~/.vim ~/.vim_old
     fi
     mkdir ~/.vim
     cd ~/.vim
-    git clone git@github.com:LambdaRan/LambdaVim.git
+    git clone https://github.com/LambdaRan/LambdaVim.git
     
-    root_dir="~/.vim/LambdaRan"
-    if [ -e "~/.vimrc" ]; then
+    if [ -e "$HOME/.vimrc" ]; then
         # 在原vimrc文件中追加内容
-        cat ${root_dir}/vimrc_append >> ~/.vimrc
+        cat ~/.vim/LambdaVim/vimrc_append >> ~/.vimrc
     else
-        cp ${root_dir}/vimrc_template ~/.vimrc
+        cp ~/.vim/LambdaVim/vimrc_template ~/.vimrc
     fi
 }
 # 下载插件管理软件vim-plug
@@ -36,7 +35,7 @@ function main()
     download_LambdaVim
     echo "下载插件管理器，并安装默认插件"
     download_vim_plug
-    install_vim_plug
+    install_vim_plugin
 
     echo "Just enjoy it!"
 }
