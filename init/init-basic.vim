@@ -103,10 +103,11 @@ silent! call mkdir(expand('~/.vim/tmp'), "p", 0755)
 
 " Others {{{
 set backspace=indent,eol,start  "设置退格键
+set winaltkeys=no       " Windows 禁用 ALT 操作菜单（使得 ALT 可以用到 Vim里）
 "set spell spelllang=en_us       "打开英语单词的拼写检查。 
 set autochdir       "自动切换工作目录
 set noerrorbells    "出错时，不要发出响声。
-set visualbell      "出错时，发出视觉提示，通常是屏幕闪烁。
+"set visualbell      "出错时，发出视觉提示，通常是屏幕闪烁。
 set autoread        "打开文件监视。如果在编辑过程中文件发生外部改变辑,就会发出提示。
 set cindent         "打开 C/C++ 语言缩进优化 
 set ttimeout        "打开功能键超时检测（终端下功能键为一串 ESC 开头的字符串） 
