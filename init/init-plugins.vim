@@ -23,7 +23,8 @@ if index(g:bundle_group, 'basic') >= 0
 
 	" 展示开始画面，显示最近编辑过的文件
 	Plug 'mhinz/vim-startify'
-
+	" 文件浏览器，代替 netrw
+	"Plug 'justinmk/vim-dirvish'
 endif
 " }}}
 
@@ -32,7 +33,10 @@ if index(g:bundle_group, 'enhanced') >= 0
 
 	" 快速文件搜索
 	"Plug 'junegunn/fzf'
-	
+
+	" 配对括号和引号自动补全
+	Plug 'Raimondi/delimitMate'
+
 endif
 " }}}
 
